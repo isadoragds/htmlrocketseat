@@ -1,0 +1,72 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    /* por padrao, os navegadores colocam margin de 8px no top */
+    margin: 0;
+}
+
+#hero {
+    /* a partir do momento que coloca o width em um elemento especifico, o text-align deixa de ser para a pagina inteira, para voltar para 
+    a pagina inteira, é só colocar margin auto, assim ele vai distribuir os espacamento automaticamente pela pagina. */
+    width: 592px;
+    /* margin auto é o agrupamento dos 4 tipos de margin (top, bottom, right e left) */
+    /* primeiro valor aplica para top, segundo valor para as laterais (quando for 3 valores) e terceiro valor para o bottom */
+    /* 4 valores short-hand: top, right, bottom e left (relogio no sentido horario) */
+    margin: 0 auto 72px;
+}
+
+#hero img {
+    margin-bottom: 72px;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 49px;
+    line-height: 56px;
+    font-weight: normal;
+
+    margin-bottom: 32px;
+}
+
+h1 span {
+    font-weight: bold;
+}
+
+span,
+a {
+    color: #FF9900;
+}
+
+p,
+#footer {
+    color: #7D7987;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+/* o seletor a + a, faz com que no footer, ele pegue o a que anterior a ele, tenha um a. dessa forma, a margem é aplicada apenas para o segundo a,
+deixando o elemento inteiro centralizado de forma correta. */
+/* se ficassse igual a forma abaixo, ficaria aplicada a margin right para ambos links, deixando descentralizado
+#footer a{
+    margin-right: 28px;
+} */
+#footer a+a {
+    margin-left: 28px;
+}
+
+
+.line {
+    width: 568px;
+    height: 0px;
+    margin: 0 auto 8px;
+    border: 1px solid #ECEFF2;
+}
+
+#balls {
+    /* o position cria um novo contexto ou camada na pagina, sobrepondo os outros elementos de acordo com a posicao selecionada */
+    /* o padrao é o position static */
+    /* ao colocar o postion, outras propriedades sao liberadas, como o top e right*/
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
